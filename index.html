@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blocksys | Create, Play, Connect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">BLOCKSYS</div>
+        <div class="nav-links">
+            <a href="#"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="#"><i class="fas fa-compass"></i> Discover</a>
+            <a href="#" class="active"><i class="fas fa-plus-square"></i> Create</a>
+        </div>
+        <div class="user-profile">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="Avatar">
+            <span>DevUser_01</span>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>Build in the Cloud. Play in the Launcher.</h1>
+                <p>Create high-fidelity blocky worlds using our integrated Google Cloud editor and sync instantly to the Blocksys Launcher.</p>
+                <div class="cta-buttons">
+                    <button class="btn-primary" id="createGameBtn"><i class="fas fa-hammer"></i> Create New Project</button>
+                    <button class="btn-secondary"><i class="fas fa-download"></i> Get Launcher</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="block-preview">
+                    <div class="cube" id="rotatingCube"></div>
+                </div>
+            </div>
+        </div>
+
+        <section class="games-grid">
+            <div class="section-header">
+                <h2>Community Templates</h2>
+                <span>View All</span>
+            </div>
+            <div class="cards-container">
+                <div class="game-card">
+                    <div class="card-img" style="background: linear-gradient(45deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);"></div>
+                    <div class="card-info">
+                        <h3>Neon City RPG</h3>
+                        <p>By CyberBuilder</p>
+                        <button class="btn-play">Import to Engine</button>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="card-img" style="background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);"></div>
+                    <div class="card-info">
+                        <h3>Voxel Survival</h3>
+                        <p>By TerraFormer</p>
+                        <button class="btn-play">Import to Engine</button>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="card-img" style="background: linear-gradient(to top, #30cfd0 0%, #330867 100%);"></div>
+                    <div class="card-info">
+                        <h3>Zero Gravity</h3>
+                        <p>By SpaceAce</p>
+                        <button class="btn-play">Import to Engine</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Editor Modal -->
+    <div class="editor-overlay" id="editorOverlay">
+        <div class="editor-modal">
+            <div class="modal-header">
+                <h3>Initializing Google Cloud Editor...</h3>
+                <button id="closeEditor">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="loading-bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="ai-features">
+                    <div class="ai-tag"><i class="fas fa-robot"></i> AI Blockify Enabled</div>
+                    <div class="ai-tag"><i class="fas fa-cloud"></i> Syncing to Ploytoria Servers</div>
+                </div>
+                <p>Authenticating with Blocksys Launcher. Your project will be live once edited.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
